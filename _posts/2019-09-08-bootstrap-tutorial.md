@@ -153,3 +153,9 @@ In the example above, we put everything in a container. Then we can use css to p
 In Bootstrap, there are many built-in components like navbar and buttons etc. You can find these all from www.getbootstrap.com. For example, if you go to https://getbootstrap.com/docs/4.3/components/buttons/, you can find different kind of buttons and from the scroll down list on the left hand side, you can also find other components such as navbar and stuff.
 
 In the next sections, we would started applying the basic concepts above in real life examples.
+
+<style>
+.tablelines table, .tablelines td, .tablelines th {
+        border: 1px solid black;
+        }
+</style>
