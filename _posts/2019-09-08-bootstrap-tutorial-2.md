@@ -1,7 +1,7 @@
 ---
 title: A Beginner Guide to Bootstrap (Part 2) - Login Page
 author: Mike Chan
-layout: post
+layout: default
 category: bootstrap
 ---
 
