@@ -2,11 +2,11 @@
 title: A Beginner Guide to Bootstrap (Part 1)
 author: Mike Chan
 layout: post
-comments: true
+comments: true 
 ---
 
 
-## What is Bootstrap
+## 1. What is Bootstrap
 
 Bootstrap is an opensource tool for website design using HTML, CSS and Javascript. It is very powerful for developing Responsive Web Development (RWD). This tutorial would discuss some basic skills in how to use this powerful tool in your web development. 
 
@@ -41,7 +41,7 @@ Then, you would find a template like the one below.
 
 That's it! Setting up bootstrap is as simple as that. Now, you are ready to make your website using Bootstrap.
 
-## A Basic Grid System of Bootstrap
+## 2. A Basic Grid System of Bootstrap
 
 
 Before start our coding, lets understand what is a grid system in Bootstrap. In Bootstrap, you can control the size of each div by grid. Bootstrap grid system divide a screen into 12 columns. For example, if you tell Bootstrap that your div class would occupies 12 columns, it means that your div class would occupies 100% of the screen width. If your div class occupies 6 columns, it would be half of the screen. Also, you can design your div class to occupies different screen width for different devies. For example, you can tell Bootstrap that your div class would occupies 12 columns for large devices like desktop but just 6 columns for mid-sized devies like laptop. Then you can simply define it by <div class = "col-lg-12 col-md-6">.  A list of definition syntax is as shown in table below:
@@ -145,7 +145,7 @@ In the example above, we put everything in a container. Then we can use css to p
 
 <span class="image"><img src="{{ 'assets/images/bootstraptutorial3.png' | relative_url }}" alt="" /></span>
 
-## Adding Bootstrap default Component
+## 3. Adding Bootstrap default Component
 
 In Bootstrap, there are many built-in components like navbar and buttons etc. You can find these all from www.getbootstrap.com. For example, if you go to https://getbootstrap.com/docs/4.3/components/buttons/, you can find different kind of buttons and from the scroll down list on the left hand side, you can also find other components such as navbar and stuff.
 
