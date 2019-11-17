@@ -3,8 +3,6 @@ title: A Beginner Guide to Bootstrap (Part 1)
 author: Mike Chan
 layout: post
 comments: true
-category: bootstrap
-tags:[bootstrap, webdevelopment]
 ---
 
 
