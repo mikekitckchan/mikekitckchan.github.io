@@ -6,7 +6,7 @@ comments: true
 ---
 
 
-## 1. What is Bootstrap
+## What is Bootstrap
 
 Bootstrap is an opensource tool for website design using HTML, CSS and Javascript. It is very powerful for developing Responsive Web Development (RWD). This tutorial would discuss some basic skills in how to use this powerful tool in your web development. 
 
@@ -41,7 +41,7 @@ Then, you would find a template like the one below.
 
 That's it! Setting up bootstrap is as simple as that. Now, you are ready to make your website using Bootstrap.
 
-## 2. A Basic Grid System of Bootstrap
+## A Basic Grid System of Bootstrap
 
 
 Before start our coding, lets understand what is a grid system in Bootstrap. In Bootstrap, you can control the size of each div by grid. Bootstrap grid system divide a screen into 12 columns. For example, if you tell Bootstrap that your div class would occupies 12 columns, it means that your div class would occupies 100% of the screen width. If your div class occupies 6 columns, it would be half of the screen. Also, you can design your div class to occupies different screen width for different devies. For example, you can tell Bootstrap that your div class would occupies 12 columns for large devices like desktop but just 6 columns for mid-sized devies like laptop. Then you can simply define it by <div class = "col-lg-12 col-md-6">.  A list of definition syntax is as shown in table below:
