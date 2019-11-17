@@ -3,6 +3,12 @@ html {
 	min-height: 100%;
 }
 
+
+.tablelines table, .tablelines td, .tablelines th {
+        border: 1px solid black;
+        }
+
+
 body {
 	/* Margin bottom by footer height */
 	margin-bottom: 8em;
