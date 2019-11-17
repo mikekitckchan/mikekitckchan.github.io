@@ -6,7 +6,7 @@ category: bootstrap
 ---
 
 
-## Introduction
+
 
 This would be our first section in introducing how to use bootstrap in real life example. At first, putting the neccessary CDN 
 link of bootstrap within ```<head> ```. If you are not familar with how to include CDN of Bootstrap into your project, please refer to the first session of this series. Then, we can start making our loging page.
