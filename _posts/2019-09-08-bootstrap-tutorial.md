@@ -10,6 +10,8 @@ comments: true
 <p>
 Bootstrap is an opensource tool for website design using HTML, CSS and Javascript. It is very powerful for developing Responsive Web Development (RWD). This tutorial would discuss some basic skills in how to use this powerful tool in your web development. 
 </p>
+
+## To begin
 So, to begin, how to setup? To include bootstrap in your project, you don't need to install or download anything. You can simply go to https://getbootstrap.com. And click get started.
 
 
