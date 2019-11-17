@@ -83,7 +83,7 @@ Let's put it in practice, if you would like to make your paragraph occupies half
 
 It will shows something like below on your screen:
 
-<img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial1.png' | relative_url }}" width="420" alt="" />
+<img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial1.png' | relative_url }}" width="1000" alt="" />
 
 Using this grid system, you can design some text alignment like below:-
 
@@ -108,7 +108,7 @@ Using this grid system, you can design some text alignment like below:-
 
 It will shows something like this:
 
-<span class="image"><img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial2.png' | relative_url }}" alt="" /></span>
+<img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial2.png' | relative_url }}" width="1000" alt="" />
 
 So, I made two rows and two columns, each column occupies around 1/4 of the screen's width.
 
@@ -146,7 +146,7 @@ However, the example above doesn't look nice as everything is aligned top and le
 
 In the example above, we put everything in a container. Then we can use css to place the container 30% from the left and 25% from the top. Now, it look much better than before:
 
-<span class="image"><img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial3.png' | relative_url }}" alt="" /></span>
+<img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial3.png' | relative_url }}" width="1000" alt="" />
 
 ## Adding Bootstrap default Component
 
