@@ -83,7 +83,7 @@ Let's put it in practice, if you would like to make your paragraph occupies half
 
 It will shows something like below on your screen:
 
-<span class="image"><img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial1.png' | relative_url }}" alt="" /></span>
+<img src="{{ 'assets/images/posts/2019-09-08-bootstrap-tutorial/bootstraptutorial1.png' | relative_url }}" alt="" />
 
 Using this grid system, you can design some text alignment like below:-
 
