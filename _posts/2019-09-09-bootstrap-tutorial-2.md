@@ -7,9 +7,10 @@ category: bootstrap
 
 
 
-
+<p>
 This would be our first section in introducing how to use bootstrap in real life example. At first, putting the neccessary CDN 
 link of bootstrap within ```<head> ```. If you are not familar with how to include CDN of Bootstrap into your project, please refer to the first session of this series. Then, we can start making our loging page.
+  </p>
 
 ## Container
 As per the first section, we can put everything into a container for easy management. We can start off our first version of login page as below:
