@@ -2,6 +2,7 @@
 title: A Beginner Guide to Bootstrap (Part 1)
 author: Mike Chan
 layout: default
+tags: [web development, bootstrap]
 comments: true 
 ---
 
