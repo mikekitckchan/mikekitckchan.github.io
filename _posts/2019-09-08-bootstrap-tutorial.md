@@ -6,7 +6,7 @@ comments: true
 ---
 
 
-## What is Bootstrap
+
 
 Bootstrap is an opensource tool for website design using HTML, CSS and Javascript. It is very powerful for developing Responsive Web Development (RWD). This tutorial would discuss some basic skills in how to use this powerful tool in your web development. 
 
