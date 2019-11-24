@@ -51,7 +51,7 @@ Before start our coding, lets understand what is a grid system in Bootstrap. In 
 
 |                                | For small devices         | For mid-sized devices     | For large devices         |
 | ------------------------------ | ------------------------- | ------------------------- | ------------------------- |
-| Occupying 25% of screen width  | <div class = "col-sm-3">  | <div class = "col-md-3">  | <div class = "col-lg-3">  |
+| Occupying 25% of screen width  | ```code<div class = "col-sm-3">```  | <div class = "col-md-3">  | <div class = "col-lg-3">  |
 | Occupying 50% of screen width  | <div class = "col-sm-6">  | <div class = "col-md-6">  | <div class = "col-lg-6">  |
 | Occupying 75% of screen width  | <div class = "col-sm-9">  | <div class = "col-md-9">  | <div class = "col-lg-9">  |
 | Occupying 100% of screen width | <div class = "col-sm-12"> | <div class = "col-md-12"> | <div class = "col-lg-12"> |
