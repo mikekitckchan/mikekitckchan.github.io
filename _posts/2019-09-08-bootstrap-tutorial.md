@@ -51,10 +51,10 @@ Before start our coding, lets understand what is a grid system in Bootstrap. In 
 
 |                                | For small devices         | For mid-sized devices     | For large devices         |
 | ------------------------------ | ------------------------- | ------------------------- | ------------------------- |
-| Occupying 25% of screen width  | ```code<div class = "col-sm-3">```  | <div class = "col-md-3">  | <div class = "col-lg-3">  |
-| Occupying 50% of screen width  | <div class = "col-sm-6">  | <div class = "col-md-6">  | <div class = "col-lg-6">  |
-| Occupying 75% of screen width  | <div class = "col-sm-9">  | <div class = "col-md-9">  | <div class = "col-lg-9">  |
-| Occupying 100% of screen width | <div class = "col-sm-12"> | <div class = "col-md-12"> | <div class = "col-lg-12"> |
+| Occupying 25% of screen width  | ```<div class = "col-sm-3">```  | ```<div class = "col-md-3">```  | ```<div class = "col-lg-3">```  |
+| Occupying 50% of screen width  | ```<div class = "col-sm-6">```  | ```<div class = "col-md-6">```  | ```<div class = "col-lg-6">```  |
+| Occupying 75% of screen width  | ```<div class = "col-sm-9"> ``` | ```<div class = "col-md-9">```  | ```<div class = "col-lg-9"> ``` |
+| Occupying 100% of screen width | ```<div class = "col-sm-12">``` | ```<div class = "col-md-12">``` | ```<div class = "col-lg-12">``` |
 
 Let's put it in practice, if you would like to make your paragraph occupies half of the screen's width, you can simply use the following code inside <body>:
 
@@ -154,8 +154,3 @@ In Bootstrap, there are many built-in components like navbar and buttons etc. Yo
 
 In the next sections, we would started applying the basic concepts above in real life examples.
 
-<style>
-.tablelines table, .tablelines td, .tablelines th {
-        border: 1px solid black;
-        }
-</style>
