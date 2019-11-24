@@ -8,7 +8,7 @@ comments: true
 
 This tutorial shows a simple example in how to deploy a Flask web app in Raspberry Pi using Nginx and uwsgi.
 
-<!-more-->
+<!--more-->
 
 # Why do we need Nginx and uwsgi?
 
