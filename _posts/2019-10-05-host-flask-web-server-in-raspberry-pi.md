@@ -14,7 +14,7 @@ This tutorial shows a simple example in how to deploy a Flask web app in Raspber
 
 As you may know, Flask has its own built-in server. However, this server mainly used development stage and is used for development convenience. However, when your project comes to production, its built-in server would be very slow to response to request.Thus,we would need a HTTP server (i.e. Nginx) and a uwsgi server to connect the HTTP server with our flask web app. In this tutorial, we would only deploy a simple "hello world" flask web app. 
 
-# To Begin
+## To Begin
 To begin, let's create a virtual environment for our web app.
 
 ```console
@@ -23,7 +23,7 @@ root$ virtualenv helloworld
 
 
 
-# Installation
+## Installation
 
 ```console
 sudo apt-get install nginx
@@ -56,14 +56,14 @@ vacuum = true
 die-on-term = true
 ```
 
-# Simple testing on Nginx File
+## Simple testing on Nginx File
 In your working folder, 
 ```console
 uwsgi --ini /home/pi/[ ]/uwsgi_config.ini
 ```
 Open a new shell and access to pi. Type “ls/tmp/“. There should be a file named helloworld.sock.
 
-# Link uwsgi with NGINX
+## Link uwsgi with NGINX
 First, remove “default” file from “/etc/nginx/sites-enabled/” 
 
 ```console
