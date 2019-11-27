@@ -14,35 +14,53 @@ This tutorial shows a simple example in how to deploy a Flask web app in Raspber
 
 As you may know, Flask has its own built-in server. However, this server mainly used development stage and is used for development convenience. However, when your project comes to production, its built-in server would be very slow to response to request.Thus,we would need a HTTP server (i.e. Nginx) and a uwsgi server to connect the HTTP server with our flask web app. In this tutorial, we would only deploy a simple "hello world" flask web app. 
 
-## To Begin
-To begin, let's create a virtual environment for our web app.
+## Making a flask app
+To begin, it always a good practice to create a virtual environment for a python project. So, let's create one for our web app at ```console /home/pi```
 
 ```console
-root$ virtualenv helloworld
+virtualenv helloworld
 ```
+Then, go into the virtual environment. Activate the virtual environment and install flask for the web app.
 
+```console
+cd virtualenv
+source bin/activate
+pip install flask
+```
+Then, create an helloapp.py as the major flask web app of the project. Inside app.py, we just write a siple hello world web app.
 
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+    def hello():
+        return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+```
 
 ## Installation
 
+After setting up our flask app, we can now move on to installing nginx and uwsgi for our upcoming steps.
+
 ```console
 sudo apt-get install nginx
-```
-If not working, try sudo apt-get update and try again
-
-```console
 sudo pip3 install uwsgi
 ```
+If it shows error or not working, you can try sudo apt-get update and try again.
 
+## Create Initiation File
 
-## Nginx Initiation File
-Create a file called uwsgi_config.ini in your working folder.
+Now, let's setup a initiation file to configure uwsgi connection. A sample uwsgi initiation file is as per below.
+
 ```code
 [uwsgi]
-chdir = /home/pi/[your working folder]
-module = helloworld:app
+chdir = /home/pi/helloworld  #This points to the folder 
+module = helloapp:app        #This tells which module is our major flask web app
 
-master = true
+master = true                #It 
 processes = 1
 threads = 2
 
@@ -90,7 +108,7 @@ server {
 }
 ```
 
-Then, ink “/etc/nginx/sites-available/helloworld_proxy” file to “/etc/nginx/sites-enabled” directory:
+Then, link “/etc/nginx/sites-available/helloworld_proxy” file to “/etc/nginx/sites-enabled” directory:
 
 ```console
 sudo ln -s /etc/nginx/sites-available/sample_app_proxy /etc/nginx/sites-enabled
