@@ -82,6 +82,13 @@ uwsgi --ini /home/pi/[ ]/uwsgi_config.ini
 Open a new shell and access to pi. Type “ls/tmp/“. There should be a file named helloworld.sock.
 
 ## Link uwsgi with NGINX
+First, input the following command in console.
+
+```console
+sudo service nginx start
+```
+
+Then, when you will find that a site i
 First, remove “default” file from “/etc/nginx/sites-enabled/” 
 
 ```console
