@@ -38,18 +38,19 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
 ```
 
-Now, let's try if the flask app can run properly. Let's type ```FLASK_APP=helloapp.py``` to identify helloapp.py as the major flask app. Then type ```flask run``` to fireup the server. Now, type ```ifconfig``` in console to check the ip address of your device. If your pi is connected to router via wifi, you should check the one under eth0. It should shows something like this:
+Now, let's try if the flask app can run properly. Let's type ```FLASK_APP=helloapp.py``` to identify helloapp.py as the major flask app. Then type ```flask run``` to fireup the server. Now, type ```ifconfig``` in console to check the ip address of your device. If your pi is connected to router via wifi, you should check the one under wlan. It should shows something like this:
 
 ```
-eth0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
-	ether 8c:85:90:78:8c:9e 
-	inet6 fe80::1c34:598f:712f:482d%en0 prefixlen 64 secured scopeid 0x6 
-	inet 192.168.43.149 netmask 0xffffff00 broadcast 192.168.43.255
-	nd6 options=201<PERFORMNUD,DAD>
-	media: autoselect
-	status: active
+wlan0     Link encap:Ethernet  HWaddr 00:24:2c:3b:f8:79  
+          inet addr:192.168.1.102  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::224:2cff:fe3b:f879/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:509669 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:366807 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:715274922 (715.2 MB)  TX bytes:35266765 (35.2 MB)
 ```
-In this case, your ip address is 192.168.43.255. Then, you can try to access the website using other devices connected to same router by type the ip address in browser. If it works, you can now move on to next step.
+In this case, your ip address is 192.168.1.102. Then, you can try to access the website using other devices connected to same router by type the ip address in browser. If it works, you can now move on to next step.
 
 ## Installation
 
@@ -63,52 +64,47 @@ If it shows error or not working, you can try ```sudo apt-get update``` and try 
 
 ## Create Initiation File
 
-Now, let's setup a initiation file to configure uwsgi connection. A sample uwsgi initiation file is as per below.
+Now, let's setup a initiation file to configure uwsgi connection in ```home/pi/helloworld```. A sample uwsgi initiation file is as per below.
 
 ```code
 [uwsgi]
-chdir = /home/pi/helloworld  #This points to the folder of where your app is.
-module = helloapp:app        #This tells which module is our major flask web app
+chdir = /home/pi/helloworld  
+module = helloapp:app        
 
-master = true                #It 
-processes = 1                #It tells how many proecesses our web app need.
-threads = 2                  #It tells how many threads our web app need.
+master = true                
+processes = 1                
+threads = 2                  
 
-uid = www-data               #these two lines tell the webapp can be access by www-data. 
+uid = www-data               
 gid = www-data
 
-socket = /tmp/helloworld.sock #The file would create a socket file and 
+socket = /tmp/helloworld.sock 
 chmod-socket = 664
 vacuum = true
 
 die-on-term = true
 ```
+The above config file tells the environment to look for the flask app in ```home/pi/helloworld```. The module name is ```helloapp```. Fire up the web app with one process and two threads. uid and gid are www-data. www-data is a standard linux terms to allow www-data user to access the file as read-only and without password. It is standard for web server. The file would end up create a socket file binding port 80(defined in flask). The socket file can be found in ```/tmp/helloworld.sock```. 
 
-## Simple testing on Nginx File
-In your working folder, 
-```console
-uwsgi --ini /home/pi/[ ]/uwsgi_config.ini
-```
-Open a new shell and access to pi. Type “ls/tmp/“. There should be a file named helloworld.sock.
+After we setup all these, let's check if it works. In ```home/pi/helloworld```, type ```uwsgi --ini /home/pi/helloworld/uwsgi_config.ini```. Then, open a new shell and access to pi. Type ```ls/tmp/```. If there is a file named ```helloworld.sock``` in the folder, it works! 
 
 ## Link uwsgi with NGINX
-First, input the following command in console.
+Now, let's configure the NGINX part for reverse proxy. Upon sucessful download of NGINX, let's test if NGINX works by starting it server. In console, input the following command.
 
-```console
+```
 sudo service nginx start
 ```
 
-Then, when you will find that a site i
-First, remove “default” file from “/etc/nginx/sites-enabled/” 
+Then, type your pi's IP address in browser of a device connected to same router, you will find a NGINX site hosting there. It is because, NGINX has a default site host in ```etc/nginx/sites-enabled```. Our job is to replace this by our website built in Flask. So, let's remove the “default” file first. 
 
-```console
+```
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
 Then,create a new file named as “helloworld_proxy” in “/etc/nginx/sites-available/” 
 
-```console
-sudo vi /etc/nginx/sites-available/helloworld_proxy
+```
+sudo nano /etc/nginx/sites-available/helloworld_proxy
 ```
 Add following configuration in “helloworld_proxy” file 
 
@@ -125,14 +121,16 @@ server {
 }
 ```
 
-Then, link “/etc/nginx/sites-available/helloworld_proxy” file to “/etc/nginx/sites-enabled” directory:
+The config file tells NGINX to listen on port 80 and pass all parameters to ```helloworld.sock``` we created earlier. Now, we need to link this file to ```/etc/nginx/sites-enabled```
 
-```console
+```
 sudo ln -s /etc/nginx/sites-available/sample_app_proxy /etc/nginx/sites-enabled
 ```
-Then, restart NGINX Service –
-```console
+Now, restart NGINX Service 
+
+```
 sudo service nginx restart
 ```
-With this your Raspberry Pi is ready with a sample Python Flask Web Application. You can type Raspberry Pi’s IP Address in your web browser to access the HTML Page.
+
+Now, when you access by typing in pi's IP address again, you should see your website built with flask.
 
