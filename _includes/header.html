@@ -43,14 +43,7 @@
 			</div>
 		</div>
 	</nav>
-		{% if page.noimage %}
-		{% else %}
-		<p style="text-align:center;">
-		<img
-			alt="{{ page.title }}"
-			src="/assets/images/{{page.id}}/top.jpg" class="img-responsive">
-		</p>
-		{% endif %}
+
 		
 
 	<div class="jumbotron  clearfix">
@@ -58,4 +51,12 @@
 		<h1 class="text-center">{{ page.title }}</h1>
 
 	</div>
+			{% if page.noimage %}
+		{% else %}
+		<p style="text-align:center;">
+		<img
+			alt="{{ page.title }}"
+			src="/assets/images/{{page.id}}/top.jpg" class="img-responsive">
+		</p>
+		{% endif %}
 </div>
