@@ -97,7 +97,7 @@ Now, let's configure the NGINX part for reverse proxy. Upon sucessful download o
 sudo service nginx start
 ```
 
-Then, type your pi's IP address in browser of a device connected to same router, you will find a NGINX site hosting there. It is because, NGINX has a default site host in ```etc/nginx/sites-enabled```. Our job is to replace this by our website built in Flask. So, let's remove the “default” file first. 
+Then, type your pi's IP address in browser of a device connected to same router, you will find a NGINX site hosting there. It is because, NGINX has a default site host in ```etc/nginx/sites-enabled```. Next step is to replace this by our website built in Flask. So, let's remove the “default” file first. 
 
 ```
 sudo rm /etc/nginx/sites-enabled/default
