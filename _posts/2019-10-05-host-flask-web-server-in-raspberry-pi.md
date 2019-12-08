@@ -12,10 +12,10 @@ This tutorial shows a simple example in how to deploy a Flask web app in Raspber
 
 ## Why do we need Nginx and uwsgi?
 
-As you may know, Flask has its own built-in server. However, this server mainly used in development stage and is used for development convenience. When your project comes to production, its built-in server would be very slow to response to request and has several security issues.Thus,we would need an HTTP server (i.e. Nginx) and a uwsgi server to connect the HTTP server with our flask web app. In this tutorial, we would show you how to deploy a simple "hello world" flask web app in Raspberry Pi using the above said tools. 
+As you may know, Flask has its own built-in server. However, this server only used for development purpose. When your project comes to production, this built-in server too slow and insecure to act as an actual server.Thus,we would need another server to handle the request/response of your web app. In this post, we would show you how to use Nginx as an HTTP server and uwsgi as an uwsgi server to connect the HTTP server with our flask web app.  
 
 ## Making a flask app
-To begin, it always a good practice to create a virtual environment for a python project. So, let's create one for our web app . Input the following commaned to create a virtual environment helloworld in any directories you want to work at. In this example, we would create the virtual environment at ```/home/pi```.
+To begin, let's create a Flask web app first. When you program in Python, it always a good practice to create a virtual environment for each project. So, let's create one for our web app . Input the following commaned to create a virtual environment helloworld in any directories you want to work at. In this example, we would create the virtual environment at ```/home/pi```.
 
 ```
 python3 -m virtualenv helloworld
@@ -64,12 +64,14 @@ If it shows error or not working, you can try ```sudo apt-get update``` and try 
 
 ## Create Initiation File
 
-Now, let's setup a initiation file to configure uwsgi connection in ```home/pi/helloworld```. A sample uwsgi initiation file is as per below.
+Now, let's setup a initiation file called ```uwsgi_config.ini``` to configure uwsgi connection in ```home/pi/helloworld```. A sample uwsgi initiation file is as per below.
 
 ```code
 [uwsgi]
 chdir = /home/pi/helloworld  
-module = helloapp:app        
+module = helloapp:app       
+virtualenv=/home/pi/helloworld/
+plugins=python3
 
 master = true                
 processes = 1                
