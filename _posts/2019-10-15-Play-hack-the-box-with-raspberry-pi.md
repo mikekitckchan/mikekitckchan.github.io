@@ -44,22 +44,4 @@ nano /etc/ssh/sshd_config
 ```
 Find ```PermitRootLogin without-password``` and make sure  ```PermitRootLogin yes``` exists.
 
-## setup VNC for the Pi
-
-If you want to share your your Pi's screen to your mac, you can do it via VNC. At first, download tightvnc to your pi.
-
-```sudo apt-get install tightvncserver```
-
-Then, run it.
-
-```tightvncserver```
-
-In your mac, go to finder and hit ```command+k```. Then, enter your pi's ip address to the box such as:
-
-```vnc://[pi's ip]:5901```
-
-Then, you should able to access the screen of the pi from your mac.
-
-
-
 So, configuration of your Pi is basically completed. You can try to use its inbuilt tools to port scan other devices within your netowrk or play Hack the Box to hunt down some machines. Happy hacking!
