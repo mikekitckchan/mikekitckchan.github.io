@@ -1,5 +1,5 @@
 ---
-title: Set up Kali Linux on Raspberry Pi
+title: Hacking with Pi (part 1) - Set up Kali Linux on Raspberry Pi
 author: Mike Chan
 layout: default
 tags: [Kali Linux, Hacking, RaspberryPi]
