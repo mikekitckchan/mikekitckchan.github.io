@@ -3,7 +3,6 @@ title: Hacking with Pi (Part 3): Basic Kali Linux Command
 author: Mike Chan
 layout: default
 tags: [Kali Linux, Hacking, RaspberryPi]
-comments: true 
 ---
 
 This passage introduces some basic command to operate Kali Linux. As suggested by its name, Kali Linux one of the Linux distributions. Thus, its commands are basically the same as general Linux commands like ```ls```, ```cd``` etc. So, let's begin
