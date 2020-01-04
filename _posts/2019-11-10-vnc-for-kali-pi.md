@@ -1,5 +1,5 @@
 ---
-title: Hacking with Pi (Part 2): setup VNC server for your Kali Linux in Raspberry Pi
+title: Hacking with Pi (Part 2): setup VNC server 
 author: Mike Chan
 layout: default
 tags: [Kali Linux, Hacking, RaspberryPi]
