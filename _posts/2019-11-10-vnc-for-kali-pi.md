@@ -1,4 +1,4 @@
-```
+
 ---
 title: Hacking with Pi (Part 2): setup VNC server 
 author: Mike Chan
@@ -6,7 +6,7 @@ layout: default
 tags: [Kali Linux, Hacking, RaspberryPi]
 comments: true 
 ---
-```
+
 If you want to share your your Pi's screen to your mac, you can do it via VNC. It allows your electronic devices such as your Macbook, or laptop with MS windows to access your Kali Linux os in your Pi with an viewable desktop.
 
 <!--more-->
