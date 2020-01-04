@@ -1,5 +1,5 @@
 ---
-title: Hacking with Pi (Part 3): Basic Kali Linux Command
+title: Hacking with Pi (Part 3) - Basic Kali Linux Command
 author: Mike Chan
 layout: default
 tags: [Kali Linux, Hacking, RaspberryPi]
