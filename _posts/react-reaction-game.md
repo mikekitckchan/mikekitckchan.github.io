@@ -47,7 +47,7 @@ Congradulation! You have successfully setup your React app.
 
 ## Including Bootstrap into your React App
 
-Bootstrap is a tools that allows our website look good. To install bootstrap, in console, type ```npm i bootstrap```.
+Bootstrap is a tools that allows our website look good. To install bootstrap, in console, type ```npm install react-bootstrap bootstrap```.
 
 Then, goto index.js, add following line in the header:
 
