@@ -58,7 +58,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 ## Making Components
 React's core concept is to build resusable components for front-end. Thus, learning how to create a component is a core part in React learning process. To start with, you may add a folder named ```components``` under ```src``` folder. It is a good practice to put all your components files under this folder. In this example, let's create a component called ```colorchanger.js```. In ```colorchanger.js```,  
 
-```
+```javascript
 import React, {Component} from 'react';
 
 class colorChanger extends Component{
